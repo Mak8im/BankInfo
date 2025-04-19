@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — БанкИнфо | Связаться с экспертами</title>
+    <meta name="description" content="Контактная информация БанкИнфо. Адрес офиса, телефоны, электронная почта и форма обратной связи для консультации с экспертами.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .accent-gradient {
+            background: linear-gradient(90deg, #0284c7 0%, #0ea5e9 100%);
+        }
+        
+        .feature-icon {
+            background-color: #e0f2fe;
+            color: #0284c7;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        
+        .cta-button {
+            background: linear-gradient(90deg, #0284c7 0%, #0ea5e9 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(14, 165, 233, 0.4);
+        }
+        
+        .contact-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-input:focus {
+            border-color: #0ea5e9;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+        }
+
+        .map-container {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Шапка сайта -->
+    <header class="shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-sky-600">
+                    <i class="fas fa-landmark mr-2"></i>БанкИнфо
+                </div>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#" class="hover:text-sky-600 transition-colors">Главная</a></li>
+                    <li><a href="#" class="hover:text-sky-600 transition-colors">О нас</a></li>
+                    <li><a href="#" class="hover:text-sky-600 transition-colors">Банки-партнеры</a></li>
+                    <li><a href="#" class="hover:text-sky-600 transition-colors">Отзывы</a></li>
+                    <li><a href="#" class="hover:text-sky-600 transition-colors">Блог</a></li>
+                    <li><a href="#" class="hover:text-sky-600 transition-colors font-medium">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="md:hidden">
+                <button class="text-gray-500 hover:text-sky-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Главный заголовок и описание -->
+        <section class="mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-center">Контакты</h1>
+            <div class="max-w-3xl mx-auto text-center text-lg text-gray-600 mb-8">
+                <p>Свяжитесь с нашими экспертами для получения консультации по выбору банка для вашего бизнеса, открытию счета и оптимизации расходов на банковское обслуживание.</p>
+            </div>
+        </section>
+
+        <!-- Контактная информация -->
+        <section class="mb-16">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Адрес -->
+                <div class="contact-card rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">Наш адрес</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            123456, г. Москва<br>
+                            ул. Финансовая, д. 10, офис 305<br>
+                            Бизнес-центр "Капитал Плаза"
+                        </p>
+                        <p class="text-gray-600">
+                            <span class="font-medium">Время работы:</span><br>
+                            Пн-Пт: 9:00 — 18:00<br>
+                            Сб-Вс: выходные дни
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Телефоны и Email -->
+                <div class="contact-card rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">Телефоны</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            <a href="tel:+74951234567" class="hover:text-sky-600 transition-colors">+7 (495) 123-45-67</a><br>
+                            <span class="text-sm text-gray-500">Главная линия</span>
+                        </p>
+                        <p class="text-gray-600 mb-4">
+                            <a href="tel:+74951234569" class="hover:text-sky-600 transition-colors">+7 (495) 123-45-69</a><br>
+                            <span class="text-sm text-gray-500">Отдел консультаций</span>
+                        </p>
+                        <div class="flex items-center mt-6 mb-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">Email</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            <a href="mailto:info@bankinfo.ru" class="hover:text-sky-600 transition-colors">info@bankinfo.ru</a><br>
+                            <span class="text-sm text-gray-500">Общие вопросы</span>
+                        </p>
+                        <p class="text-gray-600">
+                            <a href="mailto:help@bankinfo.ru" class="hover:text-sky-600 transition-colors">help@bankinfo.ru</a><br>
+                            <span class="text-sm text-gray-500">Техническая поддержка</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Социальные сети -->
+                <div class="contact-card rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">Социальные сети</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <a href="#" class="flex items-center text-gray-600 hover:text-sky-600 transition-colors">
+                                <i class="fab fa-telegram text-2xl mr-3"></i>
+                                <span>Telegram</span>
+                            </a>
+                            <a href="#" class="flex items-center text-gray-600 hover:text-sky-600 transition-colors">
+                                <i class="fab fa-vk text-2xl mr-3"></i>
+                                <span>ВКонтакте</span>
+                            </a>
+                            <a href="#" class="flex items-center text-gray-600 hover:text-sky-600 transition-colors">
+                                <i class="fab fa-youtube text-2xl mr-3"></i>
+                                <span>YouTube</span>
+                            </a>
+                            <a href="#" class="flex items-center text-gray-600 hover:text-sky-600 transition-colors">
+                                <i class="fab fa-whatsapp text-2xl mr-3"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                        <div class="mt-6">
+                            <p class="text-gray-600 mb-2">Подписывайтесь на нас в социальных сетях, чтобы быть в курсе новых обзоров, спецпредложений банков и финансовых новостей.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма обратной связи -->
+        <section class="mb-16 bg-gray-50 rounded-lg p-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-2">Свяжитесь с нами</h2>
+                <p class="text-gray-600">Заполните форму ниже, и наши эксперты свяжутся с вами в ближайшее время</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <form action="#" method="POST" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Ваше имя</label>
+                            <input type="text" id="name" name="name" required
+                                   class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-sky-500"
+                                   placeholder="Иван Иванов">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" required
+                                   class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-sky-500"
+                                   placeholder="example@email.com">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Телефон</label>
+                            <input type="tel" id="phone" name="phone"
+                                   class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-sky-500"
+                                   placeholder="+7 (___) ___-__-__">
+                        </div>
+                        <div>
+                            <label for="company" class="block text-gray-700 font-medium mb-2">Название компании</label>
+                            <input type="text" id="company" name="company"
+                                   class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-sky-500"
+                                   placeholder="ООО 'Компания'">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="subject" class="block text-gray-700 font-medium mb-2">Тема обращения</label>
+                        <select id="subject" name="subject" 
+                                class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-sky-500">
+                            <option value="">Выберите тему обращения</option>
+                            <option value="consultation">Консультация по выбору банка</option>
+                            <option value="partnership">Сотрудничество</option>
+                            <option value="feedback">Отзыв о сайте</option>
+                            <option value="press">Для прессы</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Сообщение</label>
+                        <textarea id="message" name="message" rows="5" required
+                                  class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-sky-500"
+                                  placeholder="Опишите ваш вопрос или предложение..."></textarea>
+                    </div>
+
+                    <div>
+                        <label class="flex items-start">
+                            <input type="checkbox" name="agreement" required
+                                   class="form-checkbox mt-1 mr-2 h-4 w-4 text-sky-600">
+                            <span class="text-gray-600 text-sm">
+                                Я согласен с <a href="#" class="text-sky-600 hover:underline">политикой конфиденциальности</a> 
+                                и даю согласие на обработку персональных данных
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="cta-button px-8 py-3 text-white font-medium rounded-lg">
+                            Отправить сообщение
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Карта -->
+        <section class="mb-16">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-2">Как нас найти</h2>
+                <p class="text-gray-600">Мы находимся в центре Москвы, в пешей доступности от метро</p>
+            </div>
+
+            <div class="map-container rounded-lg overflow-hidden shadow-lg">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.366842962449!2d37.610548376977486!3d55.75205997268619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a50b315e573%3A0xa886bf5a3d9b2e68!2z0JzQvtGB0LrQvtCy0YHQutC40Lkg0JrRgNC10LzQu9GM!5e0!3m2!1sru!2sru!4v1682452831668!5m2!1sru!2sru" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- FAQ секция -->
+        <section class="mb-16">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-2">Часто задаваемые вопросы</h2>
+                <p class="text-gray-600">Ответы на популярные вопросы о нашей работе</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-white rounded-lg border border-gray-200 p-5">
+                    <h3 class="text-xl font-semibold mb-3">Как быстро я получу ответ на свое обращение?</h3>
+                    <p class="text-gray-600">
+                        Мы стремимся отвечать на все обращения в течение 24 часов в рабочие дни. 
+                        Если ваш вопрос требует детального анализа или консультации со специалистами банков, 
+                        ответ может занять до 3 рабочих дней.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-lg border border-gray-200 p-5">
+                    <h3 class="text-xl font-semibold mb-3">Можно ли получить персональную консультацию от экспертов?</h3>
+                    <p class="text-gray-600">
+                        Да, мы предоставляем индивидуальные консультации по выбору банка и оптимизации расходов на обслуживание. 
+                        Вы можете заполнить форму обратной связи, и наш специалист свяжется с вами для назначения консультации.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-lg border border-gray-200 p-5">
+                    <h3 class="text-xl font-semibold mb-3">Платные ли ваши консультации?</h3>
+                    <p class="text-gray-600">
+                        Базовые консультации и подбор банка мы предоставляем бесплатно. 
+                        Расширенные консультации по оптимизации расходов и специальные условия 
+                        для крупного бизнеса могут быть платными, о чем мы предупредим заранее.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-lg border border-gray-200 p-5">
+                    <h3 class="text-xl font-semibold mb-3">Как попасть на личную встречу с экспертом?</h3>
+                    <p class="text-gray-600">
+                        Для организации личной встречи в нашем офисе позвоните нам по телефону 
+                        +7 (495) 123-45-67 или отправьте запрос через форму обратной связи. 
+                        Наш менеджер согласует с вами удобное время.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Призыв к действию -->
+        <section class="mb-16 bg-sky-600 text-white rounded-lg overflow-hidden">
+            <div class="container mx-auto p-8 md:p-12">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4">Остались вопросы?</h2>
+                        <p class="mb-6">Наши эксперты готовы помочь вам с выбором банка для вашего бизнеса. Свяжитесь с нами любым удобным способом или оставьте заявку на обратный звонок.</p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="tel:+74951234567" class="bg-white text-sky-600 hover:bg-blue-50 transition-colors py-3 px-6 rounded-full font-medium">
+                                <i class="fas fa-phone-alt mr-2"></i>Позвонить
+                            </a>
+                            <a href="#" class="bg-transparent border border-white hover:bg-white hover:text-sky-600 transition-colors py-3 px-6 rounded-full font-medium">
+                                <i class="fab fa-telegram mr-2"></i>Написать в Telegram
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex justify-end">
+                        <div class="bg-white bg-opacity-10 p-8 rounded-lg">
+                            <i class="fas fa-headset text-8xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">БанкИнфо</h3>
+                    <p class="text-gray-400 mb-4">Независимый сервис сравнения банковских услуг для бизнеса. Помогаем предпринимателям выбрать оптимальные решения для развития.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Полезные ссылки</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">О нас</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Банки-партнеры</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Отзывы о банках</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Блог о финансах</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Подписка на новости</h3>
+                    <p class="text-gray-400 mb-4">Получайте уведомления о новых обзорах и выгодных предложениях от банков</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Ваш email" class="py-2 px-4 rounded-l-md w-full text-gray-800 focus:outline-none" />
+                        <button type="submit" class="bg-sky-600 hover:bg-sky-500 transition-colors py-2 px-4 rounded-r-md">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between">
+                <p class="text-gray-400 text-sm mb-2 md:mb-0">© 2025 БанкИнфо — Все права защищены</p>
+                <p class="text-gray-400 text-sm">Информация на сайте не является публичной офертой</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Форматирование телефонного номера при вводе
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+            e.target.value = !x[2] ? x[1] : '+' + x[1] + ' (' + x[2] + ') ' + (x[3] ? x[3] + '-' + x[4] : (x[3] ? x[3] : '')) + (x[5] ? '-' + x[5] : '');
+        });
+    </script>
+</body>
+</html>
