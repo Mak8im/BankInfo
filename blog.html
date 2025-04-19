@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог о финансах — БанкИнфо | Полезные статьи для предпринимателей</title>
+    <meta name="description" content="Блог о финансах, банковских услугах и управлении деньгами для предпринимателей. Полезные статьи, советы экспертов и новости банковской сферы.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .article-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .accent-gradient {
+            background: linear-gradient(90deg, #0284c7 0%, #0ea5e9 100%);
+        }
+        
+        .category-item:hover {
+            background-color: #f0f9ff;
+        }
+        
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 10;
+        }
+        
+        .feature-icon {
+            background-color: #e0f2fe;
+            color: #0284c7;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        
+        .benefits-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #0284c7;
+            font-weight: bold;
+        }
+        
+        .cta-button {
+            background: linear-gradient(90deg, #0284c7 0%, #0ea5e9 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(14, 165, 233, 0.4);
+        }
+
+        .tag {
+            background-color: #e0f2fe;
+            color: #0284c7;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Шапка сайта -->
+    <header class="sticky-header shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-sky-600">
+                    <i class="fas fa-landmark mr-2"></i>БанкИнфо
+                </div>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#" class="hover:text-sky-600 transition-colors">Главная</a></li>
+                    <li><a href="#" class="hover:text-sky-600 transition-colors">О нас</a></li>
+                    <li><a href="#" class="hover:text-sky-600 transition-colors">Банки-партнеры</a></li>
+                    <li><a href="#" class="hover:text-sky-600 transition-colors">Отзывы о банках</a></li>
+                    <li><a href="#" class="text-sky-600 font-medium">Блог о финансах</a></li>
+                    <li><a href="#" class="hover:text-sky-600 transition-colors">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="md:hidden">
+                <button class="text-gray-500 hover:text-sky-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Главный заголовок и описание -->
+        <section class="mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-center">Блог о финансах</h1>
+            <div class="max-w-3xl mx-auto text-center text-lg text-gray-600 mb-8">
+                <p>Полезные статьи, практические советы и актуальные новости банковской сферы для предпринимателей и владельцев бизнеса</p>
+            </div>
+            <div class="flex justify-center flex-wrap gap-4 md:gap-6">
+                <a href="#latest" class="px-5 py-2 bg-sky-600 text-white rounded-full hover:bg-sky-700 transition-colors">Последние статьи</a>
+                <a href="#categories" class="px-5 py-2 bg-gray-100 text-gray-800 rounded-full hover:bg-gray-200 transition-colors">Категории</a>
+                <a href="#experts" class="px-5 py-2 bg-gray-100 text-gray-800 rounded-full hover:bg-gray-200 transition-colors">Советы экспертов</a>
+                <a href="#subscribe" class="px-5 py-2 bg-gray-100 text-gray-800 rounded-full hover:bg-gray-200 transition-colors">Подписаться</a>
+            </div>
+        </section>
+
+        <!-- Главная статья -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-r from-sky-50 to-blue-50 rounded-xl overflow-hidden shadow-md">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <div class="mb-4">
+                            <span class="tag mr-2">Финансовое планирование</span>
+                            <span class="text-gray-500 text-sm">24 апреля 2025</span>
+                        </div>
+                        <h2 class="text-3xl font-bold mb-4">5 стратегий финансового планирования для ИП в 2025 году</h2>
+                        <p class="text-gray-600 mb-6">В условиях меняющегося рынка и новых законодательных требований индивидуальным предпринимателям необходимо пересмотреть подходы к финансовому планированию. Мы подготовили 5 ключевых стратегий, которые помогут оптимизировать денежные потоки и минимизировать налоговую нагрузку в 2025 году.</p>
+                        <a href="#" class="cta-button inline-block px-6 py-3 text-white font-medium rounded-lg">Читать статью</a>
+                    </div>
+                    <div class="md:w-1/2 bg-sky-100 flex items-center justify-center py-12">
+                        <div class="text-center">
+                            <i class="fas fa-chart-line text-9xl text-sky-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Категории -->
+        <section id="categories" class="mb-16">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-2">Категории</h2>
+                <p class="text-gray-600">Выберите интересующую вас тему</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="#" class="category-item flex flex-col items-center p-6 rounded-lg border border-gray-200 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-university text-2xl text-sky-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-center">Банковские услуги</h3>
+                </a>
+                
+                <a href="#" class="category-item flex flex-col items-center p-6 rounded-lg border border-gray-200 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-pie text-2xl text-sky-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-center">Инвестиции</h3>
+                </a>
+                
+                <a href="#" class="category-item flex flex-col items-center p-6 rounded-lg border border-gray-200 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-calculator text-2xl text-sky-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-center">Налогообложение</h3>
+                </a>
+                
+                <a href="#" class="category-item flex flex-col items-center p-6 rounded-lg border border-gray-200 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-credit-card text-2xl text-sky-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-center">Кредиты и займы</h3>
+                </a>
+                
+                <a href="#" class="category-item flex flex-col items-center p-6 rounded-lg border border-gray-200 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-2xl text-sky-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-center">Финансовое планирование</h3>
+                </a>
+                
+                <a href="#" class="category-item flex flex-col items-center p-6 rounded-lg border border-gray-200 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-file-invoice-dollar text-2xl text-sky-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-center">Бухгалтерия</h3>
+                </a>
+                
+                <a href="#" class="category-item flex flex-col items-center p-6 rounded-lg border border-gray-200 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-money-bill-wave text-2xl text-sky-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-center">Оптимизация расходов</h3>
+                </a>
+                
+                <a href="#" class="category-item flex flex-col items-center p-6 rounded-lg border border-gray-200 hover:shadow-md transition-all">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-briefcase text-2xl text-sky-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-center">Бизнес-стратегии</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- Последние статьи -->
+        <section id="latest" class="mb-16">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-2">Последние статьи</h2>
+                <p class="text-gray-600">Актуальные материалы для предпринимателей</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Статья 1 -->
+                <article class="article-card rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-sky-100 flex items-center justify-center">
+                        <i class="fas fa-money-check-alt text-6xl text-sky-300"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="tag">Банковские услуги</span>
+                            <span class="text-gray-500 text-sm">18 апреля 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Новые тарифы РКО для ИП: сравнительный анализ</h3>
+                        <p class="text-gray-600 mb-4">Обзор обновленных тарифов на расчетно-кассовое обслуживание в ведущих банках России и рекомендации по выбору оптимального предложения для вашего бизнеса.</p>
+                        <a href="#" class="text-sky-600 font-medium hover:text-sky-800 transition-colors">Читать далее →</a>
+                    </div>
+                </article>
+
+                <!-- Статья 2 -->
+                <article class="article-card rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-sky-100 flex items-center justify-center">
+                        <i class="fas fa-hand-holding-usd text-6xl text-sky-300"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="tag">Налогообложение</span>
+                            <span class="text-gray-500 text-sm">15 апреля 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Налоговые изменения 2025 года: что нужно знать ИП?</h3>
+                        <p class="text-gray-600 mb-4">Анализ ключевых изменений в налоговом законодательстве, которые вступили в силу в 2025 году, и их влияние на деятельность индивидуальных предпринимателей.</p>
+                        <a href="#" class="text-sky-600 font-medium hover:text-sky-800 transition-colors">Читать далее →</a>
+                    </div>
+                </article>
+
+                <!-- Статья 3 -->
+                <article class="article-card rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-sky-100 flex items-center justify-center">
+                        <i class="fas fa-mobile-alt text-6xl text-sky-300"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="tag">Технологии</span>
+                            <span class="text-gray-500 text-sm">10 апреля 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">7 мобильных приложений для управления финансами бизнеса</h3>
+                        <p class="text-gray-600 mb-4">Обзор самых эффективных мобильных приложений, которые помогут оптимизировать финансовые процессы, контролировать расходы и планировать бюджет вашего бизнеса.</p>
+                        <a href="#" class="text-sky-600 font-medium hover:text-sky-800 transition-colors">Читать далее →</a>
+                    </div>
+                </article>
+
+                <!-- Статья 4 -->
+                <article class="article-card rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-sky-100 flex items-center justify-center">
+                        <i class="fas fa-chart-bar text-6xl text-sky-300"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="tag">Финансовое планирование</span>
+                            <span class="text-gray-500 text-sm">5 апреля 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Как составить финансовый план на квартал: пошаговая инструкция</h3>
+                        <p class="text-gray-600 mb-4">Практическое руководство по составлению эффективного финансового плана на квартал, которое поможет вам контролировать денежные потоки и достигать бизнес-целей.</p>
+                        <a href="#" class="text-sky-600 font-medium hover:text-sky-800 transition-colors">Читать далее →</a>
+                    </div>
+                </article>
+
+                <!-- Статья 5 -->
+                <article class="article-card rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-sky-100 flex items-center justify-center">
+                        <i class="fas fa-lock text-6xl text-sky-300"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="tag">Безопасность</span>
+                            <span class="text-gray-500 text-sm">1 апреля 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Финансовая безопасность бизнеса: 10 правил защиты от мошенников</h3>
+                        <p class="text-gray-600 mb-4">Экспертные рекомендации по обеспечению финансовой безопасности вашего бизнеса, включая защиту банковских счетов, безопасные онлайн-платежи и противодействие фишингу.</p>
+                        <a href="#" class="text-sky-600 font-medium hover:text-sky-800 transition-colors">Читать далее →</a>
+                    </div>
+                </article>
+
+                <!-- Статья 6 -->
+                <article class="article-card rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-sky-100 flex items-center justify-center">
+                        <i class="fas fa-coins text-6xl text-sky-300"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="tag">Инвестиции</span>
+                            <span class="text-gray-500 text-sm">28 марта 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Куда инвестировать свободные средства бизнеса в 2025 году</h3>
+                        <p class="text-gray-600 mb-4">Анализ актуальных инвестиционных инструментов для малого бизнеса, их доходность, риски и рекомендации по формированию инвестиционного портфеля в текущих экономических условиях.</p>
+                        <a href="#" class="text-sky-600 font-medium hover:text-sky-800 transition-colors">Читать далее →</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="#" class="px-6 py-3 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200 transition-colors font-medium">Смотреть все статьи</a>
+            </div>
+        </section>
+
+        <!-- Советы экспертов -->
+        <section id="experts" class="mb-16">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-2">Советы экспертов</h2>
+                <p class="text-gray-600">Актуальные рекомендации от ведущих финансовых специалистов</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Эксперт 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-start mb-6">
+                            <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-user-tie text-2xl text-sky-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1">Александр Петров</h3>
+                                <p class="text-gray-600">Финансовый аналитик, кандидат экономических наук</p>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="text-lg font-semibold mb-2">Кэш-флоу – основа вашего бизнеса</h4>
+                            <p class="text-gray-600">
+                                "Управление денежными потоками — это основа финансовой стабильности бизнеса. Даже прибыльный бизнес может столкнуться с кризисом ликвидности, если не уделять достаточно внимания кэш-флоу. Рекомендую составлять прогноз движения денежных средств на 3-6 месяцев вперед и регулярно его обновлять."
+                            </p>
+                        </div>
+                        <a href="#" class="text-sky-600 font-medium hover:text-sky-800 transition-colors">Читать все советы эксперта →</a>
+                    </div>
+                </div>
+
+                <!-- Эксперт 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-start mb-6">
+                            <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-user-tie text-2xl text-sky-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1">Марина Соколова</h3>
+                                <p class="text-gray-600">Налоговый консультант, руководитель консалтинговой компании</p>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="text-lg font-semibold mb-2">Налоговое планирование для ИП</h4>
+                            <p class="text-gray-600">
+                                "Выбор оптимальной системы налогообложения – это основа налогового планирования для ИП. Ошибка в выборе налогового режима может стоить предпринимателю до 20-30% дополнительных налоговых расходов. Анализируйте результаты работы минимум раз в квартал и не бойтесь менять налоговый режим при необходимости."
+                            </p>
+                        </div>
+                        <a href="#" class="text-sky-600 font-medium hover:text-sky-800 transition-colors">Читать все советы эксперта →</a>
+                    </div>
+                </div>
+
+                <!-- Эксперт 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-start mb-6">
+                            <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-user-tie text-2xl text-sky-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1">Дмитрий Иванов</h3>
+                                <p class="text-gray-600">Директор по развитию в финтех-компании, MBA</p>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="text-lg font-semibold mb-2">Цифровизация финансовых процессов</h4>
+                            <p class="text-gray-600">
+                                "Внедрение цифровых инструментов для управления финансами может сэкономить малому бизнесу до 15-20 часов в неделю. Начните с автоматизации рутинных процессов: выставления счетов, отслеживания расходов и формирования отчетности. Современные облачные сервисы доступны даже небольшим компаниям."
+                            </p>
+                        </div>
+                        <a href="#" class="text-sky-600 font-medium hover:text-sky-800 transition-colors">Читать все советы эксперта →</a>
+                    </div>
+                </div>
+
+                <!-- Эксперт 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-start mb-6">
+                            <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-user-tie text-2xl text-sky-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1">Елена Смирнова</h3>
+                                <p class="text-gray-600">Главный экономист банка, эксперт по кредитованию</p>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="text-lg font-semibold mb-2">Кредиты для бизнеса: брать или не брать?</h4>
+                            <p class="text-gray-600">
+                                "Кредит для бизнеса – это инструмент роста, а не спасательный круг. Прежде чем оформлять кредит, рассчитайте показатель DSCR (коэффициент покрытия долга). Он должен быть не менее 1,3, что означает: ваш свободный денежный поток должен превышать платежи по кредиту минимум на 30%."
+                            </p>
+                        </div>
+                        <a href="#" class="text-sky-600 font-medium hover:text-sky-800 transition-colors">Читать все советы эксперта →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Подписка на рассылку -->
+        <section id="subscribe" class="mb-16 bg-sky-600 text-white rounded-lg overflow-hidden">
+            <div class="container mx-auto p-8 md:p-12">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4">Подпишитесь на нашу рассылку</h2>
+                        <p class="mb-6">Получайте свежие статьи, экспертные мнения и актуальные новости финансового мира для предпринимателей на свою почту раз в неделю.</p>
+                        <form class="flex flex-col md:flex-row gap-4">
+                            <input type="email" placeholder="Ваш email" class="py-3 px-4 rounded-lg w-full md:w-auto text-gray-800 focus:outline-none" required />
+                            <button type="submit" class="bg-white text-sky-600 hover:bg-blue-50 transition-colors py-3 px-6 rounded-lg font-medium">Подписаться</button>
+                        </form>
+                    </div>
+                    <div class="hidden md:flex justify-end">
+                        <div class="bg-white bg-opacity-10 p-8 rounded-lg">
+                            <i class="fas fa-envelope-open-text text-8xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Популярные темы и теги -->
+        <section class="mb-16">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-2">Популярные темы</h2>
+                <p class="text-gray-600">Самые обсуждаемые темы в блоге</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="#" class="tag hover:bg-sky-200 transition-colors">#расчетныйСчет</a>
+                <a href="#" class="tag hover:bg-sky-200 transition-colors">#налогиИП</a>
+                <a href="#" class="tag hover:bg-sky-200 transition-colors">#финПланирование</a>
+                <a href="#" class="tag hover:bg-sky-200 transition-colors">#кредитыДляБизнеса</a>
+                <a href="#" class="tag hover:bg-sky-200 transition-colors">#бухгалтерия</a>
+                <a href="#" class="tag hover:bg-sky-200 transition-colors">#эквайринг</a>
+                <a href="#" class="tag hover:bg-sky-200 transition-colors">#финТех</a>
+                <a href="#" class="tag hover:bg-sky-200 transition-colors">#инвестиции</a>
+                <a href="#" class="tag hover:bg-sky-200 transition-colors">#оптимизацияНалогов</a>
+                <a href="#" class="tag hover:bg-sky-200 transition-colors">#стартап</a>
+                <a href="#" class="tag hover:bg-sky-200 transition-colors">#выборБанка</a>
+                <a href="#" class="tag hover:bg-sky-200 transition-colors">#финБезопасность</a>
+                <a href="#" class="tag hover:bg-sky-200 transition-colors">#бизнесПланирование</a>
+                <a href="#" class="tag hover:bg-sky-200 transition-colors">#документооборот</a>
+                <a href="#" class="tag hover:bg-sky-200 transition-colors">#мобильныйБанкинг</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">БанкИнфо</h3>
+                    <p class="text-gray-400 mb-4">Независимый сервис сравнения банковских услуг для бизнеса. Помогаем предпринимателям выбрать оптимальные решения для развития.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Навигация</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Главная</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">О нас</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Банки-партнеры</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Отзывы о банках</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Блог о финансах</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Контакты</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-sky-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">123456, Москва, ул. Финансовая, д. 7, офис 102</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone text-sky-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">+7 (495) 123-45-67</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-sky-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">info@bankinfo.ru</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock text-sky-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">Пн-Пт: 9:00 - 18:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between">
+                <p class="text-gray-400 text-sm mb-2 md:mb-0">© 2025 БанкИнфо — Все права защищены</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Политика конфиденциальности</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Плавный скролл для якорных ссылок
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
