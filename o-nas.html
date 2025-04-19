@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас — БанкИнфо | Рейтинг банков для бизнеса</title>
+    <meta name="description" content="Информация о компании БанкИнфо — независимом сервисе сравнения и рейтинга банков для бизнеса, предпринимателей и ИП">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .team-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .accent-gradient {
+            background: linear-gradient(90deg, #0284c7 0%, #0ea5e9 100%);
+        }
+        
+        .feature-icon {
+            background-color: #e0f2fe;
+            color: #0284c7;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        
+        .cta-button {
+            background: linear-gradient(90deg, #0284c7 0%, #0ea5e9 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(14, 165, 233, 0.4);
+        }
+        
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 10;
+        }
+        
+        .timeline-container {
+            position: relative;
+        }
+        
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 2px;
+            background-color: #e0f2fe;
+            left: 18px;
+            top: 0;
+        }
+        
+        .timeline-point {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .stats-item {
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .stats-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Шапка сайта -->
+    <header class="sticky-header shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-sky-600">
+                    <i class="fas fa-landmark mr-2"></i>БанкИнфо
+                </div>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="hover:text-sky-600 transition-colors">Главная</a></li>
+                    <li><a href="#" class="text-sky-600 font-medium">О нас</a></li>
+                    <li><a href="banki-partnery.html" class="hover:text-sky-600 transition-colors">Банки-партнеры</a></li>
+                    <li><a href="otzyvy-o-bankah.html" class="hover:text-sky-600 transition-colors">Отзывы о банках</a></li>
+                    <li><a href="blog-o-finansah.html" class="hover:text-sky-600 transition-colors">Блог о финансах</a></li>
+                    <li><a href="kontakty.html" class="hover:text-sky-600 transition-colors">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="md:hidden">
+                <button class="text-gray-500 hover:text-sky-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Главный заголовок и описание -->
+        <section class="mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-center">О компании БанкИнфо</h1>
+            <div class="max-w-3xl mx-auto text-center text-lg text-gray-600 mb-8">
+                <p>Независимый сервис сравнения и анализа банковских услуг для предпринимателей, который помогает выбрать оптимальное финансовое решение для вашего бизнеса.</p>
+            </div>
+            <div class="mt-12 bg-blue-50 rounded-xl p-8">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-2xl font-bold text-sky-700 mb-4">Наша миссия</h2>
+                        <p class="text-gray-700 mb-4">Делаем финансовые решения для бизнеса понятными и доступными. Мы помогаем предпринимателям экономить время и средства при выборе банка, предоставляя актуальную и непредвзятую информацию.</p>
+                        <p class="text-gray-700">Ежегодно более 500 000 предпринимателей пользуются нашими рейтингами и рекомендациями для принятия важных финансовых решений.</p>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="text-center">
+                            <div class="w-32 h-32 mx-auto bg-white rounded-full flex items-center justify-center shadow-md mb-4">
+                                <i class="fas fa-chart-line text-5xl text-sky-600"></i>
+                            </div>
+                            <p class="text-sky-700 font-semibold">Достоверная информация<br>для вашего бизнеса</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Статистика компании -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-2">БанкИнфо в цифрах</h2>
+                <p class="text-gray-600">Результаты нашей работы для предпринимателей</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="stats-item bg-white shadow-md p-6 text-center">
+                    <div class="text-4xl font-bold text-sky-600 mb-2">7+</div>
+                    <div class="text-gray-600">лет работы<br>на рынке</div>
+                </div>
+                <div class="stats-item bg-white shadow-md p-6 text-center">
+                    <div class="text-4xl font-bold text-sky-600 mb-2">50+</div>
+                    <div class="text-gray-600">банков в базе<br>для сравнения</div>
+                </div>
+                <div class="stats-item bg-white shadow-md p-6 text-center">
+                    <div class="text-4xl font-bold text-sky-600 mb-2">15 000+</div>
+                    <div class="text-gray-600">клиентов открыли<br>счета через нас</div>
+                </div>
+                <div class="stats-item bg-white shadow-md p-6 text-center">
+                    <div class="text-4xl font-bold text-sky-600 mb-2">98%</div>
+                    <div class="text-gray-600">уровень<br>удовлетворенности</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Наша команда -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-2">Команда экспертов</h2>
+                <p class="text-gray-600">Люди, которые делают БанкИнфо надежным источником информации</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="team-card rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <div class="w-28 h-28 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-user text-4xl text-sky-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-2">Александр Петров</h3>
+                        <p class="text-sky-600 text-center mb-3">Основатель и CEO</p>
+                        <p class="text-gray-600 text-center mb-4">Более 15 лет опыта в банковском секторе. Ранее занимал руководящие должности в крупнейших банках России.</p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-sky-600 transition-colors">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-sky-600 transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <div class="w-28 h-28 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-user text-4xl text-sky-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-2">Мария Иванова</h3>
+                        <p class="text-sky-600 text-center mb-3">Руководитель аналитики</p>
+                        <p class="text-gray-600 text-center mb-4">Кандидат экономических наук, автор многочисленных исследований в области финансов малого бизнеса.</p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-sky-600 transition-colors">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-sky-600 transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <div class="w-28 h-28 mx-auto bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-user text-4xl text-sky-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-2">Дмитрий Соколов</h3>
+                        <p class="text-sky-600 text-center mb-3">Финансовый эксперт</p>
+                        <p class="text-gray-600 text-center mb-4">Сертифицированный финансовый советник с 10-летним опытом работы с предпринимателями и малым бизнесом.</p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-sky-600 transition-colors">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-sky-600 transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Наши принципы работы -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-2">Наши принципы работы</h2>
+                <p class="text-gray-600">Ценности, которыми мы руководствуемся при составлении рейтингов</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="flex items-start">
+                    <div class="feature-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Объективность</h3>
+                        <p class="text-gray-600">Мы анализируем все банковские предложения на рынке без предвзятости. Наши рейтинги основаны исключительно на фактических данных и не зависят от коммерческих договоренностей с банками.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Актуальность</h3>
+                        <p class="text-gray-600">Мы ежемесячно обновляем информацию о тарифах и условиях банков, чтобы предоставлять только актуальные данные. В нашей базе более 200 тарифных планов от 50+ банков России.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Детальный анализ</h3>
+                        <p class="text-gray-600">Мы изучаем не только базовые условия, но и скрытые комиссии, дополнительные сервисы, качество обслуживания, удобство интернет-банка и мобильных приложений.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Отзывы клиентов</h3>
+                        <p class="text-gray-600">Мы собираем и анализируем реальные отзывы предпринимателей о работе с банками. Ежегодно более 10 000 предпринимателей делятся с нами своим опытом.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Как мы составляем рейтинги -->
+        <section class="mb-16 bg-gray-50 rounded-lg p-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-2">Как мы составляем рейтинги</h2>
+                <p class="text-gray-600">Методология оценки банков для предпринимателей</p>
+            </div>
+
+            <div class="timeline-container pl-12">
+                <div class="mb-8">
+                    <div class="flex items-center mb-2">
+                        <div class="timeline-point w-8 h-8 rounded-full bg-sky-600 text-white flex items-center justify-center mr-4">
+                            <span>1</span>
+                        </div>
+                        <h3 class="text-xl font-semibold">Сбор информации</h3>
+                    </div>
+                    <p class="text-gray-600 ml-12">Мы анализируем официальные сайты банков, тарифы и условия обслуживания, проводим мониторинг новостей и изменений на рынке банковских услуг.</p>
+                </div>
+
+                <div class="mb-8">
+                    <div class="flex items-center mb-2">
+                        <div class="timeline-point w-8 h-8 rounded-full bg-sky-600 text-white flex items-center justify-center mr-4">
+                            <span>2</span>
+                        </div>
+                        <h3 class="text-xl font-semibold">Оценка по 15 критериям</h3>
+                    </div>
+                    <p class="text-gray-600 ml-12">Каждый банк оценивается по 15 ключевым параметрам, включая стоимость обслуживания, условия по платежам и переводам, наличие дополнительных сервисов, качество поддержки и многое другое.</p>
+                </div>
+
+                <div class="mb-8">
+                    <div class="flex items-center mb-2">
+                        <div class="timeline-point w-8 h-8 rounded-full bg-sky-600 text-white flex items-center justify-center mr-4">
+                            <span>3</span>
+                        </div>
+                        <h3 class="text-xl font-semibold">Анализ отзывов предпринимателей</h3>
+                    </div>
+                    <p class="text-gray-600 ml-12">Мы учитываем реальный опыт клиентов банков, собирая и верифицируя отзывы через наш сайт, социальные сети и партнерские платформы.</p>
+                </div>
+
+                <div class="mb-8">
+                    <div class="flex items-center mb-2">
+                        <div class="timeline-point w-8 h-8 rounded-full bg-sky-600 text-white flex items-center justify-center mr-4">
+                            <span>4</span>
+                        </div>
+                        <h3 class="text-xl font-semibold">Тайные покупатели</h3>
+                    </div>
+                    <p class="text-gray-600 ml-12">Наши эксперты регулярно проверяют качество обслуживания в банках, оценивая скорость открытия счета, компетентность менеджеров и удобство сервисов.</p>
+                </div>
+
+                <div class="mb-8">
+                    <div class="flex items-center mb-2">
+                        <div class="timeline-point w-8 h-8 rounded-full bg-sky-600 text-white flex items-center justify-center mr-4">
+                            <span>5</span>
+                        </div>
+                        <h3 class="text-xl font-semibold">Составление рейтинга</h3>
+                    </div>
+                    <p class="text-gray-600 ml-12">На основе собранных данных мы рассчитываем итоговые баллы и формируем рейтинги для разных категорий предпринимателей: начинающих ИП, торговых компаний, сферы услуг и других.</p>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-white p-6 rounded-lg shadow-sm">
+                <div class="flex items-start">
+                    <i class="fas fa-info-circle text-sky-600 text-xl mt-1 mr-3"></i>
+                    <div>
+                        <h4 class="font-semibold mb-1">Важно знать:</h4>
+                        <p class="text-gray-600">Мы обновляем рейтинги ежеквартально, а информацию о тарифах и условиях банков — ежемесячно. Это позволяет нам предоставлять нашим пользователям только актуальную информацию, даже в условиях быстро меняющегося рынка.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- История компании -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-2">История БанкИнфо</h2>
+                <p class="text-gray-600">Ключевые этапы развития нашей компании</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <div class="text-xl font-bold text-sky-600 mb-2">2018</div>
+                    <h3 class="font-semibold mb-2">Основание компании</h3>
+                    <p class="text-gray-600 text-sm">Запуск первой версии сайта с рейтингами банков для предпринимателей</p>
+                </div>
+
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <div class="text-xl font-bold text-sky-600 mb-2">2020</div>
+                    <h3 class="font-semibold mb-2">Расширение сервиса</h3>
+                    <p class="text-gray-600 text-sm">Добавление функционала сравнения тарифов и возможности оставлять отзывы о банках</p>
+                </div>
+
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <div class="text-xl font-bold text-sky-600 mb-2">2022</div>
+                    <h3 class="font-semibold mb-2">Собственная методика</h3>
+                    <p class="text-gray-600 text-sm">Разработка уникальной системы оценки банков по 15 критериям, важным для бизнеса</p>
+                </div>
+
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <div class="text-xl font-bold text-sky-600 mb-2">2025</div>
+                    <h3 class="font-semibold mb-2">Лидер рынка</h3>
+                    <p class="text-gray-600 text-sm">БанкИнфо становится крупнейшим независимым сервисом оценки банков для бизнеса в России</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Партнеры и признание -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-2">Партнеры и признание</h2>
+                <p class="text-gray-600">Нам доверяют ведущие финансовые организации и бизнес-сообщества</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="flex justify-center items-center h-24 bg-white shadow-sm rounded-lg p-4">
+                    <div class="text-center">
+                        <i class="fas fa-building text-gray-400 text-4xl mb-2"></i>
+                        <p class="text-sm text-gray-600">Ассоциация банков России</p>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center h-24 bg-white shadow-sm rounded-lg p-4">
+                    <div class="text-center">
+                        <i class="fas fa-briefcase text-gray-400 text-4xl mb-2"></i>
+                        <p class="text-sm text-gray-600">Опора России</p>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center h-24 bg-white shadow-sm rounded-lg p-4">
+                    <div class="text-center">
+                        <i class="fas fa-chart-pie text-gray-400 text-4xl mb-2"></i>
+                        <p class="text-sm text-gray-600">Бизнес-инкубатор НИУ ВШЭ</p>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center h-24 bg-white shadow-sm rounded-lg p-4">
+                    <div class="text-center">
+                        <i class="fas fa-award text-gray-400 text-4xl mb-2"></i>
+                        <p class="text-sm text-gray-600">Премия "Финансовый советник"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Призыв к действию -->
+        <section class="mb-16 bg-sky-600 text-white rounded-lg overflow-hidden">
+            <div class="container mx-auto p-8 md:p-12">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4">Выберите лучший банк для своего бизнеса</h2>
+                        <p class="mb-6">Воспользуйтесь нашими рейтингами и рекомендациями, чтобы найти оптимальное финансовое решение для вашей компании.</p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="index.html" class="bg-white text-sky-600 hover:bg-blue-50 transition-colors py-3 px-6 rounded-full font-medium">Смотреть рейтинг банков</a>
+                            <a href="kontakty.html" class="bg-transparent border border-white hover:bg-white hover:text-sky-600 transition-colors py-3 px-6 rounded-full font-medium">Связаться с нами</a>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex justify-end">
+                        <div class="bg-white bg-opacity-10 p-8 rounded-lg">
+                            <i class="fas fa-university text-8xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">БанкИнфо</h3>
+                    <p class="text-gray-400 mb-4">Независимый сервис сравнения банковских услуг для бизнеса. Помогаем предпринимателям выбрать оптимальные решения для развития.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Полезные ссылки</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">О нас</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Банки-партнеры</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Отзывы о банках</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Блог о финансах</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Подписка на новости</h3>
+                    <p class="text-gray-400 mb-4">Получайте уведомления о новых обзорах и выгодных предложениях от банков</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Ваш email" class="py-2 px-4 rounded-l-md w-full text-gray-800 focus:outline-none" />
+                        <button type="submit" class="bg-sky-600 hover:bg-sky-500 transition-colors py-2 px-4 rounded-r-md">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between">
+                <p class="text-gray-400 text-sm mb-2 md:mb-0">© 2025 БанкИнфо — Все права защищены</p>
+                <p class="text-gray-400 text-sm">Информация на сайте не является публичной офертой</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
