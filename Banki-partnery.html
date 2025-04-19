@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Банки-партнеры — БанкИнфо | Специальные условия для бизнеса</title>
+    <meta name="description" content="Банки-партнеры сервиса БанкИнфо предлагают специальные условия для открытия и обслуживания расчетных счетов для ИП и юридических лиц">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .bank-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .bank-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .accent-gradient {
+            background: linear-gradient(90deg, #0284c7 0%, #0ea5e9 100%);
+        }
+        
+        .feature-icon {
+            background-color: #e0f2fe;
+            color: #0284c7;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        
+        .benefits-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #0284c7;
+            font-weight: bold;
+        }
+        
+        .cta-button {
+            background: linear-gradient(90deg, #0284c7 0%, #0ea5e9 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(14, 165, 233, 0.4);
+        }
+        
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 10;
+        }
+        
+        .partner-badge {
+            background: linear-gradient(45deg, #0284c7, #06b6d4);
+            color: white;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 2;
+        }
+        
+        .discount-badge {
+            background-color: #f97316;
+            color: white;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Шапка сайта -->
+    <header class="sticky-header shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-sky-600">
+                    <i class="fas fa-landmark mr-2"></i>БанкИнфо
+                </div>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#" class="hover:text-sky-600 transition-colors">Главная</a></li>
+                    <li><a href="#" class="hover:text-sky-600 transition-colors">О нас</a></li>
+                    <li><a href="#" class="text-sky-600 font-medium">Банки-партнеры</a></li>
+                    <li><a href="#" class="hover:text-sky-600 transition-colors">Отзывы</a></li>
+                    <li><a href="#" class="hover:text-sky-600 transition-colors">Блог</a></li>
+                    <li><a href="#" class="hover:text-sky-600 transition-colors">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="md:hidden">
+                <button class="text-gray-500 hover:text-sky-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Главный заголовок и описание -->
+        <section class="mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-center">Банки-партнеры БанкИнфо</h1>
+            <div class="max-w-3xl mx-auto text-center text-lg text-gray-600 mb-8">
+                <p>Мы сотрудничаем с ведущими банками России, чтобы предложить нашим клиентам эксклюзивные условия для открытия расчетных счетов и комплексного обслуживания бизнеса. Выбирайте среди проверенных партнеров и получайте дополнительные привилегии.</p>
+            </div>
+        </section>
+
+        <!-- Преимущества сотрудничества -->
+        <section class="mb-16 bg-gray-50 rounded-xl p-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-2">Преимущества сотрудничества с нашими партнерами</h2>
+                <p class="text-gray-600">Открывая счет через БанкИнфо, вы получаете дополнительные привилегии</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="flex flex-col items-center text-center bg-white p-6 rounded-lg shadow-sm">
+                    <div class="feature-icon mb-4">
+                        <i class="fas fa-percentage text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Специальные тарифы</h3>
+                    <p class="text-gray-600">Эксклюзивные условия обслуживания и сниженные комиссии для клиентов БанкИнфо</p>
+                </div>
+                
+                <div class="flex flex-col items-center text-center bg-white p-6 rounded-lg shadow-sm">
+                    <div class="feature-icon mb-4">
+                        <i class="fas fa-gift text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Бонусы и подарки</h3>
+                    <p class="text-gray-600">Дополнительные месяцы бесплатного обслуживания, кэшбэк и бонусы на рекламу</p>
+                </div>
+                
+                <div class="flex flex-col items-center text-center bg-white p-6 rounded-lg shadow-sm">
+                    <div class="feature-icon mb-4">
+                        <i class="fas fa-user-tie text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Персональный менеджер</h3>
+                    <p class="text-gray-600">Приоритетное обслуживание у выделенного специалиста банка для решения всех вопросов</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Премиум партнеры -->
+        <section class="mb-16">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-2">Премиум-партнеры</h2>
+                <p class="text-gray-600">Банки с эксклюзивными условиями только для клиентов БанкИнфо</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Тинькофф Банк -->
+                <div class="bank-card rounded-lg overflow-hidden shadow-md relative">
+                    <span class="partner-badge">
+                        <i class="fas fa-star mr-1"></i> Премиум
+                    </span>
+                    <span class="discount-badge">
+                        <i class="fas fa-tags mr-1"></i> -50%
+                    </span>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center">
+                                <i class="fas fa-university text-4xl text-sky-600"></i>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-lg font-bold">Тинькофф Банк</div>
+                                <div class="text-sm text-gray-500">Официальный партнер</div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3">Эксклюзивные условия</h3>
+                        <ul class="benefits-list mb-6">
+                            <li>3 месяца бесплатного обслуживания РКО</li>
+                            <li>Бесплатное открытие счета за 24 часа</li>
+                            <li>Скидка 50% на тариф "Продвинутый"</li>
+                            <li>Бесплатная бухгалтерия на 6 месяцев</li>
+                            <li>Повышенный кэшбэк по бизнес-карте до 7%</li>
+                        </ul>
+
+                        <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-info-circle text-sky-600 mt-1 mr-2"></i>
+                                <div class="text-sm text-gray-700">
+                                    Предложение действует при открытии счета до 31.12.2025
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-6">
+                        <a href="#" class="cta-button w-full block text-center py-3 text-white font-medium rounded-lg">
+                            Получить предложение
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Альфа-Банк -->
+                <div class="bank-card rounded-lg overflow-hidden shadow-md relative">
+                    <span class="partner-badge">
+                        <i class="fas fa-star mr-1"></i> Премиум
+                    </span>
+                    <span class="discount-badge">
+                        <i class="fas fa-tags mr-1"></i> -30%
+                    </span>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center">
+                                <i class="fas fa-university text-4xl text-sky-600"></i>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-lg font-bold">Альфа-Банк</div>
+                                <div class="text-sm text-gray-500">Официальный партнер</div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3">Эксклюзивные условия</h3>
+                        <ul class="benefits-list mb-6">
+                            <li>6 месяцев на тарифе "Ноль за обслуживание"</li>
+                            <li>Бесплатное открытие и ведение валютных счетов</li>
+                            <li>Бонус 15 000 ₽ на рекламу в Яндексе</li>
+                            <li>Бесплатное подключение интернет-эквайринга</li>
+                            <li>Скидка 30% на зарплатный проект</li>
+                        </ul>
+
+                        <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-info-circle text-sky-600 mt-1 mr-2"></i>
+                                <div class="text-sm text-gray-700">
+                                    Предложение действует при открытии счета до 31.12.2025
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-6">
+                        <a href="#" class="cta-button w-full block text-center py-3 text-white font-medium rounded-lg">
+                            Получить предложение
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Точка Банк -->
+                <div class="bank-card rounded-lg overflow-hidden shadow-md relative">
+                    <span class="partner-badge">
+                        <i class="fas fa-star mr-1"></i> Премиум
+                    </span>
+                    <span class="discount-badge">
+                        <i class="fas fa-tags mr-1"></i> -40%
+                    </span>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center">
+                                <i class="fas fa-university text-4xl text-sky-600"></i>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-lg font-bold">Точка Банк</div>
+                                <div class="text-sm text-gray-500">Официальный партнер</div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3">Эксклюзивные условия</h3>
+                        <ul class="benefits-list mb-6">
+                            <li>4 месяца бесплатного обслуживания на тарифе "Развитие"</li>
+                            <li>Бесплатное открытие счета для ИП и ООО</li>
+                            <li>Скидка 40% на годовое обслуживание</li>
+                            <li>Бесплатная регистрация бизнеса (ИП или ООО)</li>
+                            <li>Персональный финансовый консультант</li>
+                        </ul>
+
+                        <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-info-circle text-sky-600 mt-1 mr-2"></i>
+                                <div class="text-sm text-gray-700">
+                                    Предложение действует при открытии счета до 31.12.2025
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-6">
+                        <a href="#" class="cta-button w-full block text-center py-3 text-white font-medium rounded-lg">
+                            Получить предложение
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Стандартные партнеры -->
+        <section class="mb-16">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-2">Стандартные партнеры</h2>
+                <p class="text-gray-600">Банки с выгодными предложениями для наших клиентов</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Сбербанк -->
+                <div class="bank-card rounded-lg overflow-hidden shadow-md relative">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center">
+                                <i class="fas fa-university text-4xl text-sky-600"></i>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-lg font-bold">Сбербанк</div>
+                                <div class="text-sm text-gray-500">Партнер</div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3">Специальные условия</h3>
+                        <ul class="benefits-list mb-6">
+                            <li>2 месяца бесплатного обслуживания РКО</li>
+                            <li>Бесплатное открытие счета за 24 часа</li>
+                            <li>Бесплатная онлайн-бухгалтерия на 3 месяца</li>
+                            <li>Скидка 20% на эквайринг на 6 месяцев</li>
+                            <li>Бесплатное обслуживание бизнес-карты</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-6">
+                        <a href="#" class="cta-button w-full block text-center py-3 text-white font-medium rounded-lg">
+                            Получить предложение
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ВТБ -->
+                <div class="bank-card rounded-lg overflow-hidden shadow-md relative">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center">
+                                <i class="fas fa-university text-4xl text-sky-600"></i>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-lg font-bold">ВТБ</div>
+                                <div class="text-sm text-gray-500">Партнер</div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3">Специальные условия</h3>
+                        <ul class="benefits-list mb-6">
+                            <li>3 месяца на тарифе "На старте" бесплатно</li>
+                            <li>Бесплатное открытие счета за 24 часа</li>
+                            <li>Скидка 15% на тариф "Все включено"</li>
+                            <li>Бесплатное подключение эквайринга</li>
+                            <li>Бонус 10 000 ₽ на рекламу в ВКонтакте</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-6">
+                        <a href="#" class="cta-button w-full block text-center py-3 text-white font-medium rounded-lg">
+                            Получить предложение
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Газпромбанк -->
+                <div class="bank-card rounded-lg overflow-hidden shadow-md relative">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center">
+                                <i class="fas fa-university text-4xl text-sky-600"></i>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-lg font-bold">Газпромбанк</div>
+                                <div class="text-sm text-gray-500">Партнер</div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3">Специальные условия</h3>
+                        <ul class="benefits-list mb-6">
+                            <li>2 месяца бесплатного обслуживания РКО</li>
+                            <li>Бесплатное открытие счета в день обращения</li>
+                            <li>Скидка 10% на тариф "Стабильный"</li>
+                            <li>Бесплатные внутрибанковские переводы</li>
+                            <li>Льготные условия по кредитам для бизнеса</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-6">
+                        <a href="#" class="cta-button w-full block text-center py-3 text-white font-medium rounded-lg">
+                            Получить предложение
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Региональные партнеры -->
+        <section class="mb-16">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-2">Региональные партнеры</h2>
+                <p class="text-gray-600">Банки с выгодными предложениями в определенных регионах России</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Банк Уралсиб -->
+                <div class="bank-card rounded-lg overflow-hidden shadow-md relative">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center">
+                                <i class="fas fa-university text-4xl text-sky-600"></i>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-lg font-bold">Банк Уралсиб</div>
+                                <div class="text-sm text-gray-500">Региональный партнер</div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3">Специальные условия</h3>
+                        <ul class="benefits-list mb-6">
+                            <li>2 месяца бесплатного обслуживания РКО</li>
+                            <li>Бесплатное открытие счета за 24 часа</li>
+                            <li>Скидка 15% на эквайринг на 3 месяца</li>
+                            <li>Персональный менеджер для бизнеса</li>
+                            <li>Бесплатное обслуживание бизнес-карты</li>
+                        </ul>
+
+                        <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-sky-600 mt-1 mr-2"></i>
+                                <div class="text-sm text-gray-700">
+                                    Доступно в регионах: Урал, Сибирь, Поволжье
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-6">
+                        <a href="#" class="cta-button w-full block text-center py-3 text-white font-medium rounded-lg">
+                            Получить предложение
+                        </a>
+                    </div>
+                </div>
+
+                <!-- АкБарс Банк -->
+                <div class="bank-card rounded-lg overflow-hidden shadow-md relative">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center">
+                                <i class="fas fa-university text-4xl text-sky-600"></i>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-lg font-bold">АкБарс Банк</div>
+                                <div class="text-sm text-gray-500">Региональный партнер</div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3">Специальные условия</h3>
+                        <ul class="benefits-list mb-6">
+                            <li>3 месяца на тарифе "Первый шаг" бесплатно</li>
+                            <li>Бесплатное открытие счета за 24 часа</li>
+                            <li>Скидка 20% на корпоративные карты</li>
+                            <li>Бесплатное ведение валютного счета 6 месяцев</li>
+                            <li>Особые условия для участников ВЭД</li>
+                        </ul>
+
+                        <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-sky-600 mt-1 mr-2"></i>
+                                <div class="text-sm text-gray-700">
+                                    Доступно в регионах: Татарстан, Поволжье, Центральная Россия
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-6">
+                        <a href="#" class="cta-button w-full block text-center py-3 text-white font-medium rounded-lg">
+                            Получить предложение
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Банк Кубань Кредит -->
+                <div class="bank-card rounded-lg overflow-hidden shadow-md relative">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center">
+                                <i class="fas fa-university text-4xl text-sky-600"></i>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-lg font-bold">Кубань Кредит</div>
+                                <div class="text-sm text-gray-500">Региональный партнер</div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3">Специальные условия</h3>
+                        <ul class="benefits-list mb-6">
+                            <li>3 месяца бесплатного обслуживания РКО</li>
+                            <li>Бесплатное открытие счета в день обращения</li>
+                            <li>Скидка 20% на тариф "Бизнес-старт"</li>
+                            <li>Бесплатное подключение интернет-банка</li>
+                            <li>Льготные условия для сельхозпредприятий</li>
+                        </ul>
+
+                        <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-sky-600 mt-1 mr-2"></i>
+                                <div class="text-sm text-gray-700">
+                                    Доступно в регионах: Краснодарский край, Ростовская область, ЮФО
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-6">
+                        <a href="#" class="cta-button w-full block text-center py-3 text-white font-medium rounded-lg">
+                            Получить предложение
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Процесс сотрудничества -->
+        <section class="mb-16 bg-gray-50 rounded-xl p-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-2">Как получить специальные условия</h2>
+                <p class="text-gray-600">Простой процесс получения привилегий от банков-партнеров</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-sky-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4">1</div>
+                    <h3 class="text-xl font-semibold mb-3">Выберите банк</h3>
+                    <p class="text-gray-600">Изучите предложения наших партнеров и выберите наиболее подходящий банк</p>
+                </div>
+                
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-sky-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4">2</div>
+                    <h3 class="text-xl font-semibold mb-3">Заполните заявку</h3>
+                    <p class="text-gray-600">Оставьте заявку на сайте БанкИнфо, указав выбранный банк и свои контактные данные</p>
+                </div>
+                
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-sky-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4">3</div>
+                    <h3 class="text-xl font-semibold mb-3">Получите промокод</h3>
+                    <p class="text-gray-600">Мы свяжемся с вами и предоставим специальный промокод для получения привилегий</p>
+                </div>
+                
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-sky-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4">4</div>
+                    <h3 class="text-xl font-semibold mb-3">Откройте счет</h3>
+                    <p class="text-gray-600">Обратитесь в банк, укажите промокод и получите все преимущества партнерской программы</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма заявки -->
+        <section class="mb-16">
+            <div class="bg-sky-600 text-white rounded-xl overflow-hidden">
+                <div class="p-8 md:p-12">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h2 class="text-3xl font-bold mb-4">Получите консультацию эксперта</h2>
+                            <p class="mb-6">Не знаете, какой банк выбрать? Наши специалисты помогут подобрать оптимальное решение для вашего бизнеса.</p>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle mr-3"></i>
+                                    <span>Бесплатная консультация</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle mr-3"></i>
+                                    <span>Подбор банка под ваши потребности</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle mr-3"></i>
+                                    <span>Сравнение условий и тарифов</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle mr-3"></i>
+                                    <span>Помощь в получении специальных условий</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-white text-gray-800 rounded-lg p-6">
+                            <h3 class="text-2xl font-bold mb-4 text-sky-600">Оставить заявку</h3>
+                            <form>
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 text-sm font-medium mb-2" for="name">Имя</label>
+                                    <input class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500" type="text" id="name" placeholder="Введите ваше имя">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 text-sm font-medium mb-2" for="phone">Телефон</label>
+                                    <input class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500" type="tel" id="phone" placeholder="+7 (___) ___-__-__">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 text-sm font-medium mb-2" for="email">Email</label>
+                                    <input class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500" type="email" id="email" placeholder="email@example.com">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 text-sm font-medium mb-2" for="bank">Интересующий банк</label>
+                                    <select class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500" id="bank">
+                                        <option value="">Выберите банк</option>
+                                        <option value="tinkoff">Тинькофф Банк</option>
+                                        <option value="alfa">Альфа-Банк</option>
+                                        <option value="tochka">Точка Банк</option>
+                                        <option value="sber">Сбербанк</option>
+                                        <option value="vtb">ВТБ</option>
+                                        <option value="other">Другой банк</option>
+                                    </select>
+                                </div>
+                                <div class="mb-6">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="mr-2">
+                                        <span class="text-sm text-gray-600">Я согласен на обработку персональных данных</span>
+                                    </label>
+                                </div>
+                                <button type="submit" class="cta-button w-full py-3 text-white font-medium rounded-lg">
+                                    Отправить заявку
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Часто задаваемые вопросы -->
+        <section class="mb-16">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-2">Часто задаваемые вопросы</h2>
+                <p class="text-gray-600">Ответы на популярные вопросы о сотрудничестве с банками-партнерами</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="rounded-lg border border-gray-200 overflow-hidden">
+                    <div class="p-5">
+                        <h3 class="text-xl font-semibold mb-3">Как стать вашим клиентом и получить специальные условия?</h3>
+                        <p class="text-gray-600">Чтобы получить специальные условия от банков-партнеров, просто выберите интересующий вас банк на нашем сайте и оставьте заявку. Наш специалист свяжется с вами в течение 1 рабочего дня, предоставит всю необходимую информацию и специальный промокод для получения привилегий при открытии счета.</p>
+                    </div>
+                </div>
+
+                <div class="rounded-lg border border-gray-200 overflow-hidden">
+                    <div class="p-5">
+                        <h3 class="text-xl font-semibold mb-3">Сколько стоят ваши услуги?</h3>
+                        <p class="text-gray-600">Все наши услуги по подбору банка и консультации абсолютно бесплатны для клиентов. Мы получаем вознаграждение от банков-партнеров за привлечение новых клиентов, поэтому вам не нужно платить за наши рекомендации и помощь в открытии счета.</p>
+                    </div>
+                </div>
+
+                <div class="rounded-lg border border-gray-200 overflow-hidden">
+                    <div class="p-5">
+                        <h3 class="text-xl font-semibold mb-3">Чем отличаются премиум-партнеры от обычных партнеров?</h3>
+                        <p class="text-gray-600">Премиум-партнеры предлагают эксклюзивные условия, недоступные при прямом обращении в банк. Это могут быть увеличенные периоды бесплатного обслуживания, повышенные скидки на тарифы, дополнительные бонусы и преференции. С обычными партнерами у нас также есть специальные условия, но они могут быть менее выгодными по сравнению с премиум-предложениями.</p>
+                    </div>
+                </div>
+
+                <div class="rounded-lg border border-gray-200 overflow-hidden">
+                    <div class="p-5">
+                        <h3 class="text-xl font-semibold mb-3">Могу ли я получить специальные условия, если у меня уже есть счет в банке?</h3>
+                        <p class="text-gray-600">В большинстве случаев специальные условия распространяются только на новых клиентов банка. Однако некоторые партнеры предлагают бонусы и для существующих клиентов, например, при подключении дополнительных услуг или открытии нового счета. Уточните возможности у нашего консультанта, указав, что вы уже являетесь клиентом конкретного банка.</p>
+                    </div>
+                </div>
+
+                <div class="rounded-lg border border-gray-200 overflow-hidden">
+                    <div class="p-5">
+                        <h3 class="text-xl font-semibold mb-3">Как долго действуют специальные предложения?</h3>
+                        <p class="text-gray-600">Срок действия специальных предложений указан в описании каждого банка-партнера. Обычно они действуют до конца текущего года, но могут быть изменены или продлены. Рекомендуем уточнять актуальность условий у наших консультантов перед принятием решения.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">БанкИнфо</h3>
+                    <p class="text-gray-400 mb-4">Независимый сервис сравнения банковских услуг для бизнеса. Помогаем предпринимателям выбрать оптимальные решения для развития.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Полезные ссылки</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">О нас</a></li>
+                        <li><a href="#" class="text-white font-medium">Банки-партнеры</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Отзывы о банках</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Блог о финансах</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Контакты</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-sky-400"></i>
+                            <span class="text-gray-400">Москва, ул. Ленина, 10, офис 512</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-sky-400"></i>
+                            <span class="text-gray-400">+7 (495) 123-45-67</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-sky-400"></i>
+                            <span class="text-gray-400">info@bankinfo.ru</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock mt-1 mr-3 text-sky-400"></i>
+                            <span class="text-gray-400">Пн-Пт: 9:00 - 18:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between">
+                <p class="text-gray-400 text-sm mb-2 md:mb-0">© 2025 БанкИнфо — Все права защищены</p>
+                <p class="text-gray-400 text-sm">Информация на сайте не является публичной офертой</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
